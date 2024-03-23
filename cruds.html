@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/css.css" />
+    <title>cruds</title>
+  </head>
+  <body>
+    <div class="cont">
+      <nav>
+        <h1>curds</h1>
+        <h4>products management system</h4>
+      </nav>
+      <hr />
+      <section>
+        <div><input type="text" placeholder="title" id="title" /></div>
+        <div>
+          <input
+            type="number"
+            onkeyup="getTotal()"
+            placeholder="price"
+            id="price"
+          />
+          <input
+            type="number"
+            onkeyup="getTotal()"
+            placeholder="ads"
+            id="ads"
+          />
+          <input
+            type="number"
+            onkeyup="getTotal()"
+            placeholder="taxes"
+            id="taxes"
+          />
+          <input
+            type="number"
+            onkeyup="getTotal()"
+            placeholder="discount"
+            id="discount"
+          />
+          <input type="number" readonly placeholder="total" id="total" />
+        </div>
+        <div>
+          <input type="number" placeholder="amount" id="amount" />
+        </div>
+        <div>
+          <input type="text" placeholder="category" id="category" />
+        </div>
+        <div><button id="create">create</button></div>
+        <div>
+          <input
+            type="text"
+            placeholder="search"
+            id="search"
+            onkeyup="searchdata(this.value)"
+          />
+        </div>
+        <div id="bt">
+          <button id="name" onclick="search(this.id)">search by name</button>
+          <button id="cat" onclick="search(this.id)">search by category</button>
+        </div>
+        <div><button id="all" onclick="alll()">delete all</button></div>
+      </section>
+      <hr />
+      <table>
+        <tr>
+          <th>id</th>
+          <th>title</th>
+          <th>price</th>
+          <th>taxes</th>
+          <th>ads</th>
+          <th>total</th>
+          <th>category</th>
+          <th>update</th>
+          <th>delete</th>
+        </tr>
+        <tbody id="body">
+          <!-- <td>1</td>
+            <td>1</td>
+            <td>12</td>
+            <td>taxes</td>
+            <td>ads</td>
+            <td>total</td>
+            <td>category</td> -->
+          <!-- <td><button>update</button></td>
+            <td><button>delete</button></td> -->
+        </tbody>
+
+        <!-- <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>12</td>
+          <td>taxes</td>
+          <td>ads</td>
+          <td>total</td>
+          <td>category</td>
+          <td><button>update</button></td>
+          <td><button>delete</button></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>12</td>
+          <td>taxes</td>
+          <td>ads</td>
+          <td>total</td>
+          <td>category</td>
+          <td><button>update</button></td>
+          <td><button>delete</button></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>12</td>
+          <td>taxes</td>
+          <td>ads</td>
+          <td>total</td>
+          <td>category</td>
+          <td><button>update</button></td>
+          <td><button>delete</button></td>
+        </tr> -->
+      </table>
+    </div>
+    <script src="cruds.js"></script>
+  </body>
+</html>
